@@ -1,0 +1,287 @@
+.image-item img,
+.block-image img,
+.caption,
+.image-gallery figure figcaption {
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    border: none;
+    @include mh-auto;
+}
+
+.entry-content {
+    .image-gallery {
+        margin: $gap-large -20px;
+        @include mq($mq-large) {
+            margin: $gap-medium -8px;
+        }
+
+        .image-gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            @include mh-auto;
+
+            .image-item {
+                padding-left: 20px;
+                padding-right: 20px;
+                @include mh-auto;
+                @include mq($mq-large) {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                
+                img {
+                    width: auto !important;
+                    height: auto !important;
+                    display: block;
+                    border: none;
+                    @include mh-auto;
+                }
+            }
+        }
+    }
+}
+
+.has-4-2-1-img {
+    width: 25%;
+    margin-bottom: 0;
+    @include mq($mq-medium) {
+        width: 50%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last two elements
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+    @include mq($mq-xsmall) {
+        width: 100%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-4-2-img {
+    width: 25%;
+    margin-bottom: 0;
+    @include mq($mq-medium) {
+        width: 50%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last two elements
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-4-1-img {
+    width: 25%;
+    margin-bottom: 0;
+    @include mq($mq-medium) {
+        width: 100%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-3-2-1-img {
+    width: 33.3333333333%;
+    margin-bottom: 0;
+    @include mq($mq-medium) {
+        width: 50%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include mq($mq-xsmall) {
+        width: 100%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-3-2-img {
+    width: 33.3333333333%;
+    margin-bottom: 0;
+    @include mq($mq-medium) {
+        width: 50%;
+        margin-bottom: $gap-gallery-inner;
+
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-2-1-img {
+    width: 50%;
+    margin-bottom: 0;
+    
+    @include mq($mq-xsmall) {
+        width: 100%;
+        margin-bottom: $gap-gallery-inner;
+        
+        // Selects the last element
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.has-2-img {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.has-1-full-img {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.has-1-center-img {
+    /* width: 50%; */
+    max-width: $paragraph-max-width;
+    margin-bottom: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.video-block {
+    max-width: $paragraph-max-width;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    margin: $gap-large auto;
+    @include mq($mq-medium) {
+        margin: $gap-medium auto;
+    }
+
+    &.is-full,
+    &.is-w100 {
+        max-width: 100%;
+    }
+
+    .video-frame {
+        // background-color: currentColor;
+        // padding-bottom: 66.667%;
+        padding-bottom: 56.25%;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        
+        p {
+            margin: 0 auto;
+            display: block;
+            box-sizing: border-box;
+            
+            iframe,
+            object,
+            embed {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: 0;
+                display: block;
+            }
+        }
+    }
+}
+
+.spotify-block {
+    max-width: $paragraph-max-width;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    margin: $gap-large auto;
+
+    @include mq($mq-medium) {
+        margin: $gap-medium auto;
+    }
+
+    .embed-frame {
+        // background-color: currentColor;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        // box-sizing: border-box;
+
+        p {
+            margin: 0 auto;
+            display: block;
+            box-sizing: border-box;
+            
+            iframe,
+            object,
+            embed {
+                position: relative;
+                height: 400px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: 0;
+                display: block;
+            }
+        }
+
+        
+    }
+}
+
+.soundcloud-block {
+    max-width: $paragraph-max-width;
+    margin: $gap-large auto;
+
+    .embed-frame {
+        // background-color: currentColor;
+        p {
+            margin: 0 auto;
+            iframe,
+            object,
+            embed {
+                display: block;
+            }
+        }
+    }
+}
+
+.caption,
+.interview-qa figure figcaption {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    max-width: 100%;
+    /* opacity: .4; */
+}

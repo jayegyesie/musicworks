@@ -1,0 +1,48 @@
+/*
+========================================
+    Setup - Variables
+========================================
+*/
+
+
+// Media Query Widths
+$mq-xxlarge:                    1440px;
+$mq-xlarge:                     1280px;
+$mq-large:                      1024px;
+$mq-medium:                     768px;
+$mq-small:                      652px; // this is when we have 620px wide text with 16px padding either side
+$mq-xsmall:                     576px;
+$mq-xxsmall:                    420px;
+
+// Font Definitions
+$font-PxGrotesk:                "PxGrotesk",Helvetica,Arial,sans-serif;
+$font-family:                   $font-PxGrotesk;
+
+// wwedwd
+$paragraph-max-width:           620px;
+
+// Gaps & Spacing
+$gap-large: 64px;
+$gap-medium: 48px;
+$gap-small: 24px;
+
+// $gap-small: 64px;
+// $gap-small: 48px;
+// $gap-small: 32px;
+// // $gap-small: 24px;
+// $gap-small: 16px;
+
+$gap-gallery-inner: 32px;
+
+// Line Heights
+$lh-copy:                       2;
+$lh-title:                      1.25;
+$self-add-12:                   calc(1em + (.5rem + .25rem));
+
+// Spacing
+$gutter-width:                  40px;
+
+// Grid
+$gutter-width-large:            40px;
+$gutter-width-medium:           24px;
+$gutter-width-small:            16px;

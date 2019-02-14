@@ -1,0 +1,115 @@
+.header-page {
+    // color: #213145;
+    // background-color: #d1d1d1;
+    text-align: center;
+    padding: 96px 0 64px;
+
+    @include mq($mq-large) {
+        padding: 64px 0 48px;
+    }
+    @include mq($mq-medium) {
+        padding: 48px 0 32px;
+    }
+
+    h1 {
+        font-size: 64px;
+        line-height: 1.25;
+        font-weight: 700;
+        margin: 0 auto;
+        max-width: 1024px;
+
+        @include mq($mq-large) {
+            font-size: 48px;
+        }
+        @include mq($mq-medium) {
+            font-size: 36px;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin: 32px auto;
+        max-width: 768px;
+
+        @include mq($mq-large) {
+            font-size: 20px;
+            margin: 24px auto;
+        }
+        @include mq($mq-medium) {
+            font-size: 20px;
+            margin: 16px auto;
+        }
+    }
+}
+
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px 40px;
+
+    @include mq($mq-large) {
+        grid-gap: 20px 20px;
+    }
+    
+    @include mq($mq-medium) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    // @include mq($mq-xxsmall) {
+    //     grid-template-columns: repeat(1,1fr);
+    // }
+
+    .thumb-post-item {
+        text-align: left;
+        // margin-bottom: 40px;
+
+        img {
+            width: auto !important;
+            height: auto !important;
+            display: block;
+            border: none;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: calc(1em + 8px);
+            margin: 0;
+            // text-transform: uppercase;
+            
+            @include mq($mq-small) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+            // opacity: .8;
+            
+            @include mq($mq-small) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+#related-interviews h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0 auto 64px;
+
+    @include mq($mq-small) {
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0 auto 48px;
+    }
+}

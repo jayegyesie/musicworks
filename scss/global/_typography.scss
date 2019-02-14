@@ -1,0 +1,131 @@
+/*
+========================================
+	Global – Typography
+========================================
+*/
+
+// body {
+// 	font: 16px/1.5 "PxGrotesk",Helvetica,Arial,sans-serif;
+// 	color: #000;
+// 	-webkit-font-smoothing: antialiased;
+// 	text-rendering: optimizeLegibility;
+// }
+
+.text-block,
+.embed-center {
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: .1em solid currentColor;
+    }
+    
+    p,
+    text-answer {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 32px;
+        padding: 0;
+
+        @include mq($mq-xsmall) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    
+    h3,
+    text-question {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-top: 64px;
+        margin-bottom: 32px;
+        padding: 0;
+
+        @include mq($mq-xsmall) {
+            font-size: 20px;
+            line-height: 32px;
+            margin-top: 48px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.quote-block {
+    text-indent: -.45em;
+    padding: 0;
+    font-weight: 700;
+    /* text-align: center; */
+
+    font-size: 56px;
+    line-height: 72px;
+    margin: 72px auto;
+    
+    @include mq($mq-xlarge) {
+        text-indent: 0;
+        /* padding: 0 0 0 40px; */
+    }
+    @include mq($mq-large) {
+        font-size: 48px;
+        line-height: 64px;
+        margin: 64px auto;
+    }
+    @include mq($mq-medium) {
+        font-size: 36px;
+        line-height: 48px;
+        margin: 48px auto;
+    }
+    @include mq($mq-xsmall) {
+        font-size: 32px;
+        line-height: 40px;
+        margin: 40px auto;
+    }
+}
+
+
+blockquote::before {
+    content: '\201C';
+}
+blockquote::after {
+    content: '\201D';
+}
+
+// .block-quote {
+//     .quote-caption {
+
+//     }
+// }
+
+.truncate-text,
+.mw-truncate-text {
+    // width: 100%;
+    // white-space: nowrap;
+    // overflow: hidden!important;
+    // text-overflow: ellipsis;
+    @include truncate-text;
+}
+
+
+.text-stroke {
+    color: currentColor;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    // -webkit-text-stroke-width: .032em;
+    // -moz-text-stroke-width: .032em;
+    -webkit-text-stroke-color: currentColor;
+    // letter-spacing: .032em;
+
+    -webkit-text-stroke-width: .024em;
+    -moz-text-stroke-width: .024em;
+    letter-spacing: .024em;
+
+    @include mq($mq-small) {
+        -webkit-text-stroke-width: .024em;
+        -moz-text-stroke-width: .024em;
+        letter-spacing: .024em;
+    }
+}

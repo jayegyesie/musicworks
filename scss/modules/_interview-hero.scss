@@ -1,0 +1,157 @@
+.interview-hero {
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    position: relative;
+
+    /* to accommodate the navbar */
+    /* padding-top: 64px; */
+
+    // @include mq($mq-xxlarge) {}
+    // @include mq($mq-xlarge) {}
+    @include mq($mq-large) {
+        height: auto;
+    }
+    @include mq($mq-medium) {
+        margin-bottom: 64px;
+    }
+    // @include mq($mq-small) {}
+    // @include mq($mq-xsmall) {}
+    // @include mq($mq-xxsmall) {}
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 64px 0;
+
+    @include mq($mq-small) {
+        display: block;
+        margin: 32px 0;
+    }
+}
+
+.hero-text-items {
+    float: left;
+    width: 80%;
+    margin-right: -20%;
+    text-align: left;
+    z-index: 1;
+
+    @include mq($mq-small) {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin: 0 0 4px 0;
+
+        @include mq($mq-large) {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        @include mq($mq-large) {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.hero-title {
+    font-size: 120px;
+    // font-size: 96px;
+    line-height: $self-add-12;
+    // line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 32px 0;
+    position: relative;
+    // text-transform: uppercase;
+
+    @include mq($mq-xlarge) {
+        font-size: 96px;
+        // line-height: 104px;
+    }
+    @include mq($mq-large) {
+        font-size: 80px;
+        // line-height: 88px;
+        margin: 0 0 24px 0;
+    }
+    @include mq($mq-medium) {
+        font-size: 64px;
+        // line-height: 72px;
+    }
+    @include mq($mq-small) {
+        margin: 0 0 16px 0;
+    }
+    @include mq($mq-xsmall) {
+        font-size: 48px;
+        // line-height: 56px;
+    }
+    @include mq($mq-xxsmall) {
+        font-size: 36px;
+        // line-height: 48px;
+    }
+}
+.hero-subtitle {
+    // font-size: 36px;
+    font-size: 32px;
+    line-height: $self-add-12;
+    // line-height: 1.5;
+    font-weight: 700;
+    max-width: 768px;
+    margin: 0;
+
+    @include mq($mq-medium) {
+        font-size: 24px;
+    }
+    // @include mq($mq-large) {}
+    @include mq($mq-xsmall) {
+        font-size: 20px;
+        // line-height: 1.5;
+    }
+    @include mq($mq-small) {
+        margin-bottom: 32px;
+    }
+    // @include mq($mq-xsmall) {}
+    // @include mq($mq-xxsmall) {}
+}
+
+.hero-image {
+    margin-top: 0;
+    float: right;
+    display: block;
+    max-width: 100%;
+    width: calc(50% - 20px);
+    height: auto;
+    border: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+
+    @include mq($mq-small) {
+        float: none;
+        width: 100%;
+    }
+    @include mq($mq-small) {
+        float: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+.entry-content {
+    @include mq($mq-large) {
+        margin-top: 80px;
+    }
+    @include mq($mq-medium) {
+        margin-top: 64px;
+    }
+}

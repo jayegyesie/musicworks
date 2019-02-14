@@ -1,0 +1,184 @@
+.single-mixes-container {
+    margin-top: $gap-large;
+    @include mq($mq-medium) {
+        margin-top: $gap-medium;
+    }
+    p {
+        margin: 0;
+    }
+    iframe {
+        width: 100%;
+        display: block; 
+    }    
+    h1 {
+        font-size: 64px;
+        line-height: 1.25;
+        text-align: center;
+        font-weight: 700;
+        margin: 0 auto;
+        max-width: 1024px;
+
+        @include mq($mq-large) {
+            font-size: 48px;
+        }
+        @include mq($mq-medium) {
+            font-size: 36px;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 1.5;
+        text-align: center;
+        font-weight: 400;
+        margin: 32px auto;
+        max-width: 768px;
+
+        @include mq($mq-large) {
+            font-size: 20px;
+            margin: 24px auto;
+        }
+        @include mq($mq-medium) {
+            font-size: 20px;
+            margin: 16px auto;
+        }
+    }
+    
+    // h1 {
+    //     font-size: 48px;
+    //     line-height: 1.25;
+    //     text-align: center;
+    //     font-weight: 700;
+    //     margin: 0 auto 8px 0;
+    //     @include mq($mq-medium) {
+    //         font-size: 32px;
+    //     }
+    //     @include mq($mq-xsmall) {
+    //         font-size: 24px;
+    //     }
+    // }
+    // h2 {
+    //     font-size: 24px;
+    //     line-height: 1.5;
+    //     text-align: center;
+    //     font-weight: 700;
+    //     margin: 0 auto 32px 0;
+    //     @include mq($mq-medium) {
+    //         font-size: 20px;
+    //     }
+    //     @include mq($mq-xsmall) {
+    //         font-size: 16px;
+    //     }
+    // }
+}
+
+
+
+
+
+// .single-mixes-container {
+//     display: flex;
+
+//     @include mq($mq-small) {
+//         display: block;
+//     }
+    
+//     .mix-thumbnail {
+//         float: left;
+//         display: block;
+//         max-width: 100%;
+//         width: calc(50% - 20px);
+//         height: auto;
+//         border: 0;
+//         margin-top: 0;
+//         margin-right: 40px;
+//         margin-bottom: 64px;
+
+//         @include mq($mq-small) {
+//             float: none;
+//             width: 100%;
+//             margin-right: 0;
+//             margin-bottom: 32px;
+//         }
+        
+//         img {
+//             width: auto !important;
+//             height: auto !important;
+//             display: block;
+//             border: none;
+//             margin-left: auto;
+//             margin-right: auto;
+//         }
+//     }
+    
+//     .mix-details {
+//         margin-top: 0;
+//         float: left;
+//         display: block;
+//         max-width: 100%;
+//         width: calc(50% - 20px);
+//         height: auto;
+//         border: 0;
+
+//         @include mq($mq-small) {
+//             float: none;
+//             width: 100%;
+//         }
+
+//         h1 {
+//             font-size: 48px;
+//             line-height: 1.25;
+//             margin: 0 auto 8px 0;
+
+//             @include mq($mq-medium) {
+//                 font-size: 32px;
+//             }
+
+//             @include mq($mq-xsmall) {
+//                 font-size: 24px;
+//             }
+//         }
+        
+//         h2 {
+//             font-size: 24px;
+//             line-height: 1.5;
+//             font-weight: 700;
+//             margin: 0 auto 16px 0;
+
+//             @include mq($mq-medium) {
+//                 font-size: 20px;
+//             }
+
+//             @include mq($mq-xsmall) {
+//                 font-size: 16px;
+//             }
+//         }
+
+//         ol {
+//             padding: 0;
+//             list-style-position: inside;
+            
+//             li {
+//                 font-size: 14px;
+//                 line-height: 20px;
+//                 margin-top: 0;
+//                 margin-bottom: 4px;
+//             }
+//         }
+
+        
+        
+//         .button-mix {
+//             background: #000;
+//             color: #fff;
+//             font-size: 14px;
+//             line-height: 40px;
+//             font-weight: 700;
+//             text-transform: uppercase;
+//             letter-spacing: 0.1em;
+//             padding: 0 16px;
+//             margin: 16px 0;
+//             display: inline-block;
+//         }
+//     }
+// }

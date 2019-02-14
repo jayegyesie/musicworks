@@ -1,0 +1,27 @@
+/*
+========================================
+    Setup - Mixins
+========================================
+*/
+
+
+// Media Query
+@mixin mq($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+// Margin Horizontal Auto
+@mixin mh-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Truncate 1st Line of Text
+@mixin truncate-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+}

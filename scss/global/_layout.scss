@@ -1,0 +1,63 @@
+// Spacing set aside for the navbar
+.site-content {
+    padding-top: 4rem;  /* 64px */
+}
+
+// Max Width 1280px
+.body-wrap {
+    max-width: 82rem;  /* 1312px */
+    padding-left: 1rem;  /* 16px */
+    padding-right: 1rem;  /* 16px */
+    @include mh-auto;
+    width: 100%;
+}
+
+.body-width-paragraph,
+.text-block h2,
+.text-block h3,
+.embed-center h3,
+.text-block p,
+.embed-center p,
+.text-block blockquote,
+.text-block figure,
+.text-block ol,
+.text-block ul,
+.text-block iframe,
+.interview-intro,
+.single-image,
+.share-interview,
+.embed-container p,
+.embed-container p iframe {
+    max-width: 38.75rem;  /* 620px */
+}
+
+// Remove ALL Margins
+br,
+.interview_qa blockquote,
+.interview_qa blockquote P,
+figure,
+header p {
+    margin: 0;
+}
+
+// Remove ALL Paddings
+
+// Centralize Content
+.text-block h2,
+.text-block h3,
+.embed-center h3,
+.text-block p,
+.embed-center p,
+.text-block blockquote,
+.text-block figure,
+.text-block ol,
+.text-block ul,
+.text-block iframe,
+.interview-intro,
+.single-image,
+.share-interview,
+.text-block p iframe,
+.embed-container p,
+.embed-container p iframe {
+    @include mh-auto;
+}
