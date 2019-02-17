@@ -35,15 +35,33 @@
 <body <?php body_class(); ?> style="background: <?php the_field('background_color'); ?>; color: <?php the_field('text_color'); ?>;">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'musicworks' ); ?></a>
+	<a href="javascript:void(0)" data-navigation-toggler class="site-header-toggler topleft">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<?php
+	the_custom_logo();
+	if ( is_front_page() && is_home() ) :
+		?>
+		<h1 class="site-title with-toggler topleft"><a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php
+	else :
+		?>
+		<p class="site-title with-toggler topleft">
+			<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+			</a>
+		</p>
+		<?php
+	endif;
 
+	?>
 	<header id="masthead" class="site-header">
 		<div class="body-wrap container">
 
 		
 			<div class="site-branding">
 				<!-- <p class="site-title">MusicWorks</p> -->
-
-
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
@@ -58,6 +76,15 @@
 					</p>
 					<?php
 				endif;
+
+				?>
+				<a href="javascript:void(0)" data-navigation-toggler class="site-header-toggler close-menu m m-10 topright">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<?php
+
 				$musicworks_description = get_bloginfo( 'description', 'display' );
 				if ( $musicworks_description || is_customize_preview() ) :
 					?>
