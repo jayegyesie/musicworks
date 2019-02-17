@@ -14,6 +14,7 @@ $transition: cubic-bezier(0.950, 0.050, 0.795, 0.035);
         bottom: 0;
         top: 0;
         background-color: white;
+        color: black;
         overflow: hidden;
         width: 400px;
         max-width: 80%;
@@ -36,22 +37,7 @@ $transition: cubic-bezier(0.950, 0.050, 0.795, 0.035);
         background-size: contain!important;
     }
 
-    .site-branding .site-title h1 {
-        font-size: 24px;
-        line-height: 1.5;
-        font-weight: 700;
-        text-transform: uppercase;
-        border: none;
-        margin: 0;       
-    }
-    .site-branding p {
-        font-size: 20px;
-        line-height: 1.5;
-        font-weight: 700;
-        text-transform: uppercase;
-        border: none;
-        margin: 0;
-    }
+
 
     nav {
         display: flex;
@@ -84,18 +70,30 @@ $transition: cubic-bezier(0.950, 0.050, 0.795, 0.035);
     .menu-item:nth-child(1) {
         margin-left: 0;
     }
-
-    .header-progress {
-        display: block;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        /* width: 100%; */
-        height: 2px;
-        /* background: white; */
-        width: 0%;
-    }
 }
+
+.header-progress {
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    /* width: 100%; */
+    height: 2px;
+    /* background: white; */
+    width: 0%;
+}
+
+.header-logo p,
+.site-branding p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border: none;
+    margin: 0;
+}
+
 
 %place {
     position: absolute;
@@ -120,19 +118,22 @@ $transition: cubic-bezier(0.950, 0.050, 0.795, 0.035);
 }
 
 .site-header-toggler {
-    width: 65px;
-    color: black;
+    width: 72px;
+    color: currentColor;
     z-index: 9999;
+    padding: 20px;
 
-    padding: 25px;
     > span {
         -webkit-transition: all 0.05s linear;
         transition: all 0.05s linear;
         width: 100%;
         height: 2px;
-        background: black;
-        margin: 3px 0;
+        background: currentColor;
+        margin: 0 0 9px 0;
         display: block;
+    }
+    > span:last-child {
+        margin: 0;
     }
     &.close-menu {
         > span:nth-child(1) {
@@ -156,9 +157,9 @@ h1.site-title {
 }
 
 h1.site-title.with-toggler {
-    margin: 8px 60px;
+    margin: 8px 72px;
 }
 
 p.site-title.with-toggler {
-    margin: 20px 60px;
+    margin: 20px 72px;
 }
