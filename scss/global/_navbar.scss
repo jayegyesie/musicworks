@@ -140,20 +140,14 @@ $transition: cubic-bezier(0.950, 0.050, 0.795, 0.035);
         }
         > span:nth-child(2) {
             @extend %toggler-close-transform-origin;
-            transform: rotate3d(0,0,1,45deg);
             --webkit-transform: rotate3d(0,0,1,45deg);
+            transform: rotate3d(0,0,1,45deg);
         }
         > span:nth-child(3) {
             @extend %toggler-close-transform-origin;
-            transform: rotate3d(0,0,1,-45deg);
             --webkit-transform: rotate3d(0,0,1,-45deg);
+            transform: rotate3d(0,0,1,-45deg);
         }
-    }
-}
-
-.m {
-    &.m-10 {
-        margin: 10px 0;
     }
 }
 

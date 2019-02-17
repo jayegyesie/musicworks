@@ -234,6 +234,9 @@ header p {
   margin-left: auto;
   margin-right: auto; }
 
+.m.m-10 {
+  margin: 10px 0; }
+
 #masthead {
   z-index: 10000;
   width: 100%;
@@ -337,14 +340,11 @@ header p {
   .site-header-toggler.close-menu > span:nth-child(1) {
     opacity: 0; }
   .site-header-toggler.close-menu > span:nth-child(2) {
-    transform: rotate3d(0, 0, 1, 45deg);
-    --webkit-transform: rotate3d(0,0,1,45deg); }
+    --webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0, 0, 1, 45deg); }
   .site-header-toggler.close-menu > span:nth-child(3) {
-    transform: rotate3d(0, 0, 1, -45deg);
-    --webkit-transform: rotate3d(0,0,1,-45deg); }
-
-.m.m-10 {
-  margin: 10px 0; }
+    --webkit-transform: rotate3d(0,0,1,-45deg);
+    transform: rotate3d(0, 0, 1, -45deg); }
 
 h1.site-title {
   margin: 0 0 20px 0; }

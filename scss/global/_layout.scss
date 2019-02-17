@@ -61,3 +61,9 @@ header p {
 .embed-container p iframe {
     @include mh-auto;
 }
+
+.m { // generic margin class
+    &.m-10 {
+        margin: 10px 0;
+    }
+}
