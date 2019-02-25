@@ -304,9 +304,7 @@ header p {
     position: absolute;
     bottom: -4px;
     left: 0;
-    /* width: 100%; */
     height: 2px;
-    /* background: white; */
     width: 0%; }
 
 .topleft, .topright {
