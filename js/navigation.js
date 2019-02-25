@@ -12,20 +12,22 @@
 	var EXPANDED_MENU_CLASS = 'expanded';
 	EXPANDED_MENU_CLASS = ' ' + EXPANDED_MENU_CLASS + ' ';
 
-	togglers = document.querySelectorAll('[data-navigation-toggler]');
+	page = document.getElementById('page');
 	menu = document.getElementById('masthead');
-	clickHandler = function() {
-		if(!state.show_slide_in_navigation) {
-			menu.className += EXPANDED_MENU_CLASS;
-			state.show_slide_in_navigation = true;
-		} else {
-			menu.className = menu.className.replace(EXPANDED_MENU_CLASS, '');
-			state.show_slide_in_navigation = false;			
-		}	
+	clickHandler = function(e) {
+		if (e.target.matches('[data-navigation-toggler], [data-navigation-toggler] *')) {
+			e.preventDefault();
+			e.stopPropagation();
+			if(!state.show_slide_in_navigation) {
+				menu.className += EXPANDED_MENU_CLASS;
+				state.show_slide_in_navigation = true;
+			} else {
+				menu.className = menu.className.replace(EXPANDED_MENU_CLASS, '');
+				state.show_slide_in_navigation = false;			
+			}
+		}
 	};
-	togglers && togglers.length && menu && (togglers.forEach(function (el) {
-		el.onclick = clickHandler;
-	}))
+	page && (page.addEventListener('click', clickHandler));
 } )();
 
 ( function() {
